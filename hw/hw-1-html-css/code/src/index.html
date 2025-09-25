@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Todo Today</title>
+        <link rel="icon" type="image/png" href="./assets/favicon.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./styles/reset.css" />
+        <link rel="stylesheet" href="./styles/common.css" />
+        <link rel="stylesheet" href="./styles/todo.css" />
+    </head>
+    <body>
+        <main class="page">
+            <div class="todo-list">
+                <header class="todo-list__header">
+                    <img src="./assets/favicon.png" alt="" />
+                    <h1>Todo Today</h1>
+                </header>
+                <form class="todo-list__text-field">
+                    <input type="text" name="todo">
+                    <button type="submit">Add</button>
+                </form>
+                <div class="todo-list__groups">
+                    <section class="todo-group">
+                        <h2 class="visually-hidden">Active</h2>
+                        <ul class="todo-group__todos">
+                            <li>
+                                <label class="todo">
+                                    <input type="checkbox" />
+                                    <span>
+                                        Drink 8 glasses of water
+                                    </span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="todo">
+                                    <input type="checkbox" />
+                                    <span>
+                                        Meditate for 10 minutes
+                                    </span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="todo">
+                                    <input type="checkbox" />
+                                    <span>
+                                        Read a chapter of a book
+                                    </span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="todo">
+                                    <input type="checkbox" />
+                                    <span>
+                                        Go for a 30-minute walk
+                                    </span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="todo">
+                                    <input type="checkbox" />
+                                    <span>
+                                        Write in a gratitude journal
+                                    </span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="todo">
+                                    <input type="checkbox" />
+                                    <span>
+                                        Review daily goals before sleeping
+                                    </span>
+                                </label>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="todo-group">
+                        <h2 class="todo-group__title">Completed</h2>
+                        <ul class="todo-group__todos">
+                            <li>
+                                <label class="todo">
+                                    <input type="checkbox" checked="true" />
+                                    <span>
+                                        Practice deep breathing exercises
+                                    </span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="todo">
+                                    <input type="checkbox" checked="true" />
+                                    <span>
+                                        Plan meals for the day
+                                    </span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="todo">
+                                    <input type="checkbox" checked="true" />
+                                    <span>
+                                        Stretch for 15 minutes
+                                    </span>
+                                </label>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

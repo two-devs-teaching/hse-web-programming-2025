@@ -1,0 +1,13 @@
+{
+    "name": "hw-1-html-css",
+    "version": "1.0.0",
+    "description": "Homework #1. HTML, CSS",
+    "source": "src/index.html",
+    "scripts": {
+        "start": "parcel",
+        "build": "parcel build"
+    },
+    "devDependencies": {
+        "parcel": "^2.16.0"
+    }
+}
