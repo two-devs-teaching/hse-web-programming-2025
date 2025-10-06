@@ -1,0 +1,13 @@
+{
+    "name": "hw-2-js",
+    "version": "1.0.0",
+    "description": "Homework #2. JavaScript",
+    "source": "src/index.html",
+    "scripts": {
+        "start": "parcel",
+        "build": "parcel build"
+    },
+    "devDependencies": {
+        "parcel": "^2.16.0"
+    }
+}
