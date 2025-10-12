@@ -1,0 +1,459 @@
+
+/*  
+Выполнено Босоноговым Семёном
+    
+Ссылка на темплейт: https://www.figma.com/community/file/1498079767775831505 
+
+*/
+
+/* переменные для унификации стиля */
+:root {
+/* цвета для работы */
+--color-primary-bg: #f5f1eb;
+--color-secondary-bg: #e8ddd4;
+--color-dark-overlay: rgba(0,0,0,0.6);
+--color-text-primary: #2c2c2c;
+--color-text-light: #ffffff;
+--color-accent-gold: #d4af37;
+--color-warm-beige: #f7f3ed;
+--color-soft-brown: #8b7355;
+--color-dark-brown: #4a3728;
+
+/* шрифты */
+--font-serif: 'Playfair Display', serif;
+--font-sans: 'Inter', sans-serif;
+
+/* отступы */
+--space-xs: 0.5rem;
+--space-sm: 1rem;
+--space-md: 1.5rem;
+--space-lg: 2rem;
+--space-xl: 3rem;
+--space-2xl: 4rem;
+--space-3xl: 6rem;
+
+/* тени */
+--shadow-soft: 0 4px 20px rgba(0,0,0,0.1);
+--shadow-medium: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: var(--font-sans);
+color: var(--color-text-primary);
+background-color: var(--color-primary-bg);
+line-height: 1.6;
+}
+
+/* стили для навигации */
+.navbar {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+background: rgba(245, 241, 235, 0.95);
+backdrop-filter: blur(10px);
+z-index: 1000;
+padding: var(--space-sm) 0;
+border-bottom: 1px solid rgba(139, 115, 85, 0.2);
+}
+
+.nav-container {
+max-width: 1200px;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 var(--space-md);
+}
+
+.nav-logo {
+font-family: var(--font-serif);
+font-size: 1.5rem;
+font-weight: 500;
+color: var(--color-text-primary);
+text-decoration: none;
+}
+
+.nav-menu {
+display: flex;
+list-style: none;
+gap: var(--space-xl);
+}
+
+.nav-link {
+text-decoration: none;
+color: var(--color-text-primary);
+font-weight: 400;
+font-size: 0.9rem;
+letter-spacing: 0.5px;
+text-transform: uppercase;
+transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+color: var(--color-accent-gold);
+}
+
+.mobile-menu-toggle {
+display: none;
+flex-direction: column;
+cursor: pointer;
+gap: 4px;
+}
+
+.mobile-menu-toggle span {
+width: 25px;
+height: 2px;
+background: var(--color-text-primary);
+transition: all 0.3s ease;
+}
+
+/* стили для текста с приглашением */
+.hero {
+min-height: 100vh;
+background: linear-gradient(
+135deg,
+var(--color-warm-beige) 0%,
+var(--color-secondary-bg) 100%
+);
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+position: relative;
+overflow: hidden;
+}
+
+.hero::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="%23d4af37" opacity="0.1"/><circle cx="80" cy="30" r="1.5" fill="%238b7355" opacity="0.1"/><circle cx="60" cy="70" r="1" fill="%23d4af37" opacity="0.1"/><circle cx="30" cy="80" r="2" fill="%238b7355" opacity="0.05"/></svg>') repeat;
+pointer-events: none;
+}
+
+.hero-content {
+max-width: 800px;
+padding: var(--space-lg);
+position: relative;
+z-index: 2;
+}
+
+.hero-title {
+font-family: var(--font-serif);
+font-size: clamp(3rem, 8vw, 6rem);
+font-weight: 400;
+color: var(--color-text-primary);
+margin-bottom: var(--space-lg);
+letter-spacing: 2px;
+}
+
+.hero-subtitle {
+font-size: 1.2rem;
+color: var(--color-soft-brown);
+margin-bottom: var(--space-xl);
+font-weight: 300;
+line-height: 1.8;
+max-width: 600px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.hero-details {
+font-family: var(--font-serif);
+font-size: 1.1rem;
+color: var(--color-dark-brown);
+font-weight: 400;
+line-height: 1.6;
+}
+
+/* стили секции с контентом сайта */
+.content-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+max-width: 1200px;
+margin: var(--space-3xl) auto;
+gap: var(--space-lg);
+padding: 0 var(--space-md);
+}
+
+.content-card {
+aspect-ratio: 1;
+position: relative;
+border-radius: 8px;
+overflow: hidden;
+cursor: pointer;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-card:hover {
+transform: translateY(-5px);
+box-shadow: var(--shadow-medium);
+}
+
+.content-card::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+z-index: 1;
+}
+
+.card-our-story::before {
+background: linear-gradient(
+135deg,
+var(--color-dark-brown) 0%,
+rgba(74, 55, 40, 0.8) 100%
+);
+}
+
+.card-details::before {
+background: linear-gradient(
+135deg,
+var(--color-accent-gold) 0%,
+rgba(212, 175, 55, 0.7) 100%
+);
+}
+
+.card-rsvp::before {
+background: linear-gradient(
+135deg,
+var(--color-soft-brown) 0%,
+rgba(139, 115, 85, 0.8) 100%
+);
+}
+
+.card-registry::before {
+background: linear-gradient(
+135deg,
+var(--color-secondary-bg) 0%,
+rgba(232, 221, 212, 0.9) 100%
+);
+}
+
+.card-content {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+z-index: 2;
+width: 80%;
+}
+
+.card-title {
+font-family: var(--font-serif);
+font-size: 1.8rem;
+font-weight: 500;
+margin-bottom: var(--space-sm);
+letter-spacing: 1px;
+}
+
+.card-our-story .card-title,
+.card-rsvp .card-title {
+color: var(--color-text-light);
+}
+
+.card-details .card-title,
+.card-registry .card-title {
+color: var(--color-text-primary);
+}
+
+.card-description {
+font-size: 0.9rem;
+opacity: 0.9;
+font-weight: 300;
+}
+
+.card-our-story .card-description,
+.card-rsvp .card-description {
+color: var(--color-text-light);
+}
+
+.card-details .card-description,
+.card-registry .card-description {
+color: var(--color-text-primary);
+}
+
+/* стили секции для регистрации */
+.registry-section {
+background: linear-gradient(
+135deg,
+var(--color-warm-beige) 0%,
+var(--color-primary-bg) 100%
+);
+padding: var(--space-3xl) var(--space-md);
+margin-top: var(--space-3xl);
+position: relative;
+overflow: hidden;
+}
+
+.registry-section::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M20,50 Q30,30 50,50 Q70,70 80,50" stroke="%23d4af37" stroke-width="0.5" fill="none" opacity="0.1"/><path d="M10,30 Q40,10 70,30 Q90,50 100,30" stroke="%238b7355" stroke-width="0.5" fill="none" opacity="0.1"/></svg>') repeat;
+pointer-events: none;
+}
+
+.registry-content {
+max-width: 800px;
+margin: 0 auto;
+text-align: center;
+position: relative;
+z-index: 2;
+}
+
+.registry-title {
+font-family: var(--font-serif);
+font-size: 2.5rem;
+font-weight: 400;
+color: var(--color-text-primary);
+margin-bottom: var(--space-xl);
+letter-spacing: 1px;
+}
+
+.registry-text {
+font-size: 1.1rem;
+color: var(--color-soft-brown);
+margin-bottom: var(--space-xl);
+line-height: 1.8;
+font-weight: 300;
+}
+
+.registry-button {
+display: inline-block;
+padding: var(--space-md) var(--space-xl);
+background: var(--color-accent-gold);
+color: var(--color-text-light);
+text-decoration: none;
+border-radius: 50px;
+font-weight: 500;
+letter-spacing: 1px;
+text-transform: uppercase;
+transition: all 0.3s ease;
+box-shadow: var(--shadow-soft);
+}
+
+.registry-button:hover {
+background: var(--color-dark-brown);
+transform: translateY(-2px);
+box-shadow: var(--shadow-medium);
+}
+
+.author{
+    text-align: right;
+    margin: 20px 0;
+    font-family: var(--font-serif);
+}
+
+/* для адаптивности под разные форматы экранов */
+@media (max-width: 768px) {
+.nav-menu {
+gap: var(--space-md);
+}
+
+.nav-link {
+font-size: 0.8rem;
+}
+
+.hero-title {
+font-size: clamp(2.5rem, 10vw, 4rem);
+}
+
+.content-grid {
+grid-template-columns: 1fr;
+gap: var(--space-md);
+margin: var(--space-xl) auto;
+}
+
+.content-card {
+aspect-ratio: 1.2;
+}
+
+.card-title {
+font-size: 1.5rem;
+}
+
+.registry-section {
+padding: var(--space-xl) var(--space-md);
+margin-top: var(--space-xl);
+}
+
+.registry-title {
+font-size: 2rem;
+}
+}
+
+@media (max-width: 480px) {
+.nav-container {
+padding: 0 var(--space-sm);
+}
+
+.nav-menu {
+gap: var(--space-sm);
+}
+
+.nav-link {
+font-size: 0.7rem;
+}
+
+.nav-logo {
+font-size: 1.2rem;
+}
+
+.hero-content {
+padding: var(--space-md);
+}
+
+.hero-subtitle {
+font-size: 1rem;
+}
+
+.hero-details {
+font-size: 1rem;
+}
+
+.content-grid {
+padding: 0 var(--space-sm);
+}
+
+.card-title {
+font-size: 1.3rem;
+}
+
+.card-description {
+font-size: 0.85rem;
+}
+
+.registry-title {
+font-size: 1.8rem;
+}
+
+.registry-text {
+font-size: 1rem;
+}
+
+.registry-button {
+padding: var(--space-sm) var(--space-lg);
+font-size: 0.9rem;
+}
+}
