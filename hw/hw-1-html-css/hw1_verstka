@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Выполнено Босоноговым Семёном -->
+    <!-- Ссылка на темплейт: https://www.figma.com/community/file/1498079767775831505 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bosonogov, HW Verstka</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="hw_verstka.css">
+</head>
+<body>
+    <!-- навигация по сайту -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">J &amp; J</a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">HOME</a></li>
+                <li><a href="#our-story" class="nav-link">OUR STORY</a></li>
+                <li><a href="#details" class="nav-link">DETAILS</a></li>
+                <li><a href="#rsvp" class="nav-link">RSVP</a></li>
+            </ul>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- секция с текстом приглашения -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">JENNY &amp; JASON</h1>
+            <p class="hero-subtitle">
+                With love and gratitude, we invite you to share in the joy of our wedding day.
+            </p>
+            <div class="hero-details">
+                <p>Saturday, September 20, 2025</p>
+                <p>The Golden Elm Manor</p>
+                <p>St. Augustine, New York</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- секция с контентом -->
+    <section class="content-grid">
+        <div id="our-story" class="content-card card-our-story">
+            <div class="card-content">
+                <h2 class="card-title">OUR STORY</h2>
+                <p class="card-description">The story of Jenny and Jason</p>
+            </div>
+        </div>
+        
+        <div id="details" class="content-card card-details">
+            <div class="card-content">
+                <h2 class="card-title">THE DETAILS</h2>
+                <p class="card-description">Wedding day logistics and information</p>
+            </div>
+        </div>
+        
+        <div id="rsvp" class="content-card card-rsvp">
+            <div class="card-content">
+                <h2 class="card-title">RSVP</h2>
+                <p class="card-description">Respond to the wedding invitation</p>
+            </div>
+        </div>
+        
+        <div class="content-card card-registry">
+            <div class="card-content">
+                <h2 class="card-title">REGISTRY</h2>
+                <p class="card-description">Wedding gift registry</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- секция для регистрации -->
+    <section class="registry-section">
+        <div class="registry-content">
+            <h2 class="registry-title">Registry</h2>
+            <p class="registry-text">
+                Your presence is the most cherished gift. Should you wish to contribute, 
+                we've created a honeymoon registry to help us embark on a memorable 
+                adventure to the Amalfi Coast.
+            </p>
+            <a href="#" class="registry-button" target="_blank">GO TO REGISTRY</a>
+        </div>
+    </section>
+
+    <section class = "author">
+        <p class = "author__text">Versted by Semyon Bosonogov, 2025</p>
+    </section>
+
+</body>
+</html>
