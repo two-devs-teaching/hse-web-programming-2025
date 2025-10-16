@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ToDo List — вёрстка по макету</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Переключатель темы -->
+  <input id="theme" class="theme-toggle visually-hidden" type="checkbox" aria-label="Переключить тему" />
+
+  <div class="app list-app" id="app" data-app="todo">
+    <header class="app__header">
+      <h1 class="app__title">TODO LIST</h1>
+    </header>
+
+    <!-- Семантичный регион с заголовком для A11y -->
+    <section class="toolbar" aria-labelledby="filters-title">
+      <h2 id="filters-title" class="visually-hidden">Поиск и фильтры</h2>
+
+      <!-- Поиск с иконкой -->
+      <form class="searchbar" role="search" aria-label="Поиск заметок">
+        <label for="q" class="visually-hidden">Поиск</label>
+        <input id="q" class="searchbar__input" type="search" placeholder="Search note..." />
+        <button class="searchbar__icon" type="submit" aria-label="Искать" title="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M21 21l-4.2-4.2m1.2-5A7 7 0 1 1 5 5a7 7 0 0 1 13 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </form>
+
+      <!-- Выпадающий список статуса -->
+      <div class="status">
+        <label class="visually-hidden" for="status">Статус заметок</label>
+        <div class="select select--accent">
+          <select id="status" name="status" class="select__control">
+            <option value="all" selected>ALL</option>
+            <option value="complete">COMPLETE</option>
+            <option value="incomplete">INCOMPLETE</option>
+          </select>
+          <span class="select__icon" aria-hidden="true">▾</span>
+        </div>
+      </div>
+
+      <!-- Кнопка-луна: кликом переключает тему -->
+      <label for="theme" class="icon-btn" title="Toggle theme" aria-label="Toggle theme">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </label>
+    </section>
+
+    <main class="content">
+      <ul class="todo-list" aria-label="Список заметок">
+        <li class="todo-item">
+          <label class="check">
+            <input type="checkbox" />
+            <span class="check__box" aria-hidden="true"></span>
+            <span class="check__label">NOTE #1</span>
+          </label>
+          <div class="todo-item__actions">
+            <button class="icon icon--muted" title="Edit" aria-label="Edit" type="button">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M3 21l3.75-.75L21 6l-3-3L3.75 17.25 3 21z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <button class="icon icon--muted" title="Delete" aria-label="Delete" type="button">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M5 7h14M9 7V5h6v2m-8 0l1 12h8l1-12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </li>
+
+        <li class="todo-item is-done">
+          <label class="check">
+            <input type="checkbox" checked />
+            <span class="check__box" aria-hidden="true"></span>
+            <span class="check__label">NOTE #2</span>
+          </label>
+          <div class="todo-item__actions">
+            <button class="icon icon--muted" title="Edit" aria-label="Edit" type="button">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M3 21l3.75-.75L21 6l-3-3L3.75 17.25 3 21z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <button class="icon icon--muted" title="Delete" aria-label="Delete" type="button">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M5 7h14M9 7V5h6v2m-8 0l1 12h8l1-12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </li>
+
+        <li class="todo-item">
+          <label class="check">
+            <input type="checkbox" />
+            <span class="check__box" aria-hidden="true"></span>
+            <span class="check__label">NOTE #3</span>
+          </label>
+          <div class="todo-item__actions">
+            <button class="icon icon--muted" title="Edit" aria-label="Edit" type="button">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M3 21l3.75-.75L21 6l-3-3L3.75 17.25 3 21z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <button class="icon icon--muted" title="Delete" aria-label="Delete" type="button">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M5 7h14M9 7V5h6v2m-8 0l1 12h8l1-12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </li>
+      </ul>
+    </main>
+  </div>
+</body>
+</html>
