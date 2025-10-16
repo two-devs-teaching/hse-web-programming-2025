@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Todo Today</title>
+        <link rel="icon" type="image/png" href="./assets/favicon.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./styles/reset.css" />
+        <link rel="stylesheet" href="./styles/common.css" />
+        <link rel="stylesheet" href="./styles/todo.css" />
+    </head>
+    <body>
+        <main class="page">
+            <div class="todo-list">
+                <header class="todo-list__header">
+                    <img src="./assets/favicon.png" alt="" />
+                    <h1>Todo Today</h1>
+                </header>
+                <form class="todo-list__text-field" id="todo-form">
+                    <input type="text" name="todo">
+                    <button aria-label="Voice input" id="todo-voice-input" type="button">
+                        <svg width="18" height="23" viewBox="0 0 18 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.625 15.75C9.91747 15.7485 11.1566 15.2344 12.0705 14.3205C12.9844 13.4066 13.4985 12.1675 13.5 10.875V4.875C13.5 3.58207 12.9864 2.34209 12.0721 1.42785C11.1579 0.513615 9.91793 0 8.625 0C7.33207 0 6.09209 0.513615 5.17785 1.42785C4.26361 2.34209 3.75 3.58207 3.75 4.875V10.875C3.75149 12.1675 4.26558 13.4066 5.1795 14.3205C6.09342 15.2344 7.33253 15.7485 8.625 15.75ZM6 4.875C6 4.17881 6.27656 3.51113 6.76884 3.01884C7.26113 2.52656 7.92881 2.25 8.625 2.25C9.32119 2.25 9.98887 2.52656 10.4812 3.01884C10.9734 3.51113 11.25 4.17881 11.25 4.875V10.875C11.25 11.5712 10.9734 12.2389 10.4812 12.7312C9.98887 13.2234 9.32119 13.5 8.625 13.5C7.92881 13.5 7.26113 13.2234 6.76884 12.7312C6.27656 12.2389 6 11.5712 6 10.875V4.875ZM9.75 19.4269V21.375C9.75 21.6734 9.63147 21.9595 9.42049 22.1705C9.20952 22.3815 8.92337 22.5 8.625 22.5C8.32663 22.5 8.04048 22.3815 7.8295 22.1705C7.61853 21.9595 7.5 21.6734 7.5 21.375V19.4269C5.42629 19.1512 3.52305 18.1324 2.14371 16.5597C0.764369 14.9869 0.00265069 12.967 0 10.875C0 10.5766 0.118526 10.2905 0.329505 10.0795C0.540483 9.86853 0.826631 9.75 1.125 9.75C1.42337 9.75 1.70952 9.86853 1.9205 10.0795C2.13147 10.2905 2.25 10.5766 2.25 10.875C2.25 12.5658 2.92165 14.1873 4.11719 15.3828C5.31274 16.5784 6.93424 17.25 8.625 17.25C10.3158 17.25 11.9373 16.5784 13.1328 15.3828C14.3284 14.1873 15 12.5658 15 10.875C15 10.5766 15.1185 10.2905 15.3295 10.0795C15.5405 9.86853 15.8266 9.75 16.125 9.75C16.4234 9.75 16.7095 9.86853 16.9205 10.0795C17.1315 10.2905 17.25 10.5766 17.25 10.875C17.2473 12.967 16.4856 14.9869 15.1063 16.5597C13.7269 18.1324 11.8237 19.1512 9.75 19.4269Z" fill="white"/>
+                        </svg>
+                    </button>
+                    <button type="submit">Add</button>
+                </form>
+            </div>
+        </main>
+        <script src="./scripts/index.js" type="module"></script>
+    </body>
+</html>
