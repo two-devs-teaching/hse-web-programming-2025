@@ -3,8 +3,6 @@
 
 Форма для сдачи домашек и загрузки сертификатов: https://forms.yandex.ru/u/68dfc109068ff06d7333d16b
 
-Записи практик: https://disk.yandex.ru/d/V3wdcAt8-1BCfw
-
 Курсы, который надо пройти:
 1. https://stepik.org/course/82108/promo
 2. https://stepik.org/course/180784/promo
