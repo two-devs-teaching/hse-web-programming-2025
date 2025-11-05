@@ -1,0 +1,15 @@
+.header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.logotype {
+    width: 32px;
+    height: 32px;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: var(--typography-weight-bold);
+}
