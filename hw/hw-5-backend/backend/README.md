@@ -42,6 +42,19 @@ npm start
 
 The server will start on `http://localhost:3001`
 
+## API Documentation
+
+Interactive API documentation is available via Swagger UI at:
+```
+http://localhost:3001/api-docs
+```
+
+The Swagger documentation provides:
+- Interactive API testing interface
+- Detailed endpoint descriptions
+- Request/response schemas
+- Example requests and responses
+
 ## API Endpoints
 
 ### Get all todos
@@ -123,9 +136,25 @@ curl -X PUT http://localhost:3001/api/todos/1 \
 curl -X DELETE http://localhost:3001/api/todos/1
 ```
 
-### Available Scripts
+## Available Scripts
 
 - `npm run build` - Compile TypeScript to JavaScript
 - `npm start` - Run the compiled JavaScript
 - `npm run dev` - Run in development mode with ts-node
 - `npm run watch` - Watch for changes and recompile
+- `npm run lint` - Run ESLint on source files
+- `npm run lint:fix` - Run ESLint and fix auto-fixable issues
+
+## Dependencies
+
+### Production Dependencies
+- `express` - Web framework for Node.js
+- `cors` - Cross-Origin Resource Sharing middleware
+- `swagger-jsdoc` - Generate Swagger/OpenAPI specification from JSDoc comments
+- `swagger-ui-express` - Serve Swagger UI for API documentation
+
+### Development Dependencies
+- `typescript` - TypeScript compiler
+- `ts-node` - TypeScript execution environment for Node.js
+- `@types/*` - TypeScript type definitions
+- `eslint` - JavaScript/TypeScript linter
