@@ -1,0 +1,14 @@
+/* Базовые стили */
+@import url('base.css');
+
+/* Структура макета */
+@import url('layout.css');
+
+/* Навигация */
+@import url('components/navigation.css');
+
+/* Компоненты */
+@import url('components/cards.css');
+@import url('components/panels.css');
+@import url('components/buttons.css');
+@import url('components/modal.css');

@@ -1,0 +1,119 @@
+/* Основная структура макета */
+.main {
+    margin-left: 250px; 
+    margin-top: 90px; 
+    padding: 24px;
+}
+
+/* Сайдбар */
+.sidebar {
+    position: fixed;
+    top: 90px; 
+    left: 0;
+    width: 250px;
+    height: calc(100vh - 90px); 
+    background: #ffffff;
+    padding: 24px 20px;
+    border-right: 1px solid #e5e7eb;
+    overflow-y: auto;
+    z-index: 1000; 
+}
+
+/* Навигация в сайдбаре */
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+/* Карточка в сайдбаре */
+.sidebar-card {
+    margin-top: 28px;
+    background: #e8fffa;
+    padding: 16px;
+    border-radius: 14px;
+}
+
+/* Прогресс-бар */
+.progress {
+    width: 100%;
+    height: 8px; 
+    background: #bbf7d0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 75%;
+    height: 100%;
+    background: #008f7a;
+    border-radius: 10px;
+}
+
+/* Верхняя панель */
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0; 
+    width: 100%; 
+    height: 90px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 0 24px; 
+    border-bottom: 1px solid #e5e7eb;
+    z-index: 2000; 
+}
+
+.topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-left: 0; 
+    padding-left: 24px; 
+    height: 100%; 
+    background-color: #ffffff; 
+}
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 25px; 
+    padding-right: 24px; 
+}
+
+/* Основная сетка контента */
+.main-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: auto auto; 
+    gap: 20px;
+    margin-top: 25px;
+    grid-template-areas: 
+        "notifications notifications quickactions" 
+        "enrollments completions performance"; 
+    align-items: stretch; 
+}
+
+/* Позиционирование блоков в сетке */
+.notifications {
+    grid-area: notifications;
+}
+
+.quick-actions {
+    grid-area: quickactions;
+    margin-top: 0; 
+}
+
+.enrollments-panel {
+    grid-area: enrollments;
+}
+
+.completions-panel {
+    grid-area: completions;
+}
+
+.performance-panel {
+    grid-area: performance;
+}

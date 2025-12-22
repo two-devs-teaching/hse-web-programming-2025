@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hospital Data Management Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/main.css">
+
 </head>
 <body>
 
@@ -83,7 +84,7 @@
                 <div class="stat-card">
                     <div class="stat-content">
                         <p class="stat-title">Total Hospital Branches</p>
-                        <p class="stat-value">15</p>
+                        <p class="stat-value"></p>
                     </div>
                     <div class="stat-icon icon-blue">🏢</div>
                 </div>
@@ -91,7 +92,7 @@
                 <div class="stat-card">
                     <div class="stat-content">
                         <p class="stat-title">Active Courses</p>
-                        <p class="stat-value">28</p>
+                        <p class="stat-value"></p>
                     </div>
                     <div class="stat-icon icon-green">📚</div>
                 </div>
@@ -99,7 +100,7 @@
                 <div class="stat-card">
                     <div class="stat-content">
                         <p class="stat-title">Enrolled Trainees</p>
-                        <p class="stat-value">247</p>
+                        <p class="stat-value"></p>
                     </div>
                     <div class="stat-icon icon-purple">🎓</div>
                 </div>
@@ -107,7 +108,7 @@
                 <div class="stat-card">
                     <div class="stat-content">
                         <p class="stat-title">Active Trainers</p>
-                        <p class="stat-value">42</p>
+                        <p class="stat-value"></p>
                     </div>
                     <div class="stat-icon icon-teal">👥</div>
                 </div>
@@ -115,7 +116,7 @@
                 <div class="stat-card">
                     <div class="stat-content">
                         <p class="stat-title">Upcoming Sessions</p>
-                        <p class="stat-value">18</p>
+                        <p class="stat-value"></p>
                     </div>
                     <div class="stat-icon icon-orange">📅</div>
                 </div>
@@ -128,45 +129,11 @@
             <div class="notifications panel">
                 <div class="notifications-header">
                     <h2>Recent Notifications</h2>
-                    <span class="new-badge">5 New</span>
+                    <span class="new-badge"></span>
                 </div>
 
                 <ul class="notif-list">
-                    <li class="notif-item">
-                        <span class="notif-icon orange">📅</span>
-                        <div>
-                            <p>Course <strong>'Advanced Cardiology'</strong> starts in 2 days</p>
-                            <span class="time">2 hours ago</span>
-                        </div>
-                    </li>
-                    <li class="notif-item">
-                        <span class="notif-icon green">➕</span>
-                        <div>
-                            <p>New trainee added to <strong>'Lahore Branch'</strong></p>
-                            <span class="time">4 hours ago</span>
-                        </div>
-                    </li>
-                    <li class="notif-item">
-                        <span class="notif-icon blue">🩺</span>
-                        <div>
-                            <p>Training session <strong>'Emergency Medicine'</strong> completed</p>
-                            <span class="time">6 hours ago</span>
-                        </div>
-                    </li>
-                    <li class="notif-item">
-                        <span class="notif-icon purple">🧑‍⚕️</span>
-                        <div>
-                            <p>Trainer Dr. Ahmed assigned to <strong>'Pediatric Care'</strong></p>
-                            <span class="time">1 day ago</span>
-                        </div>
-                    </li>
-                    <li class="notif-item">
-                        <span class="notif-icon gray">🕒</span>
-                        <div>
-                            <p>Branch <strong>'Karachi Medical Center'</strong> updated capacity</p>
-                            <span class="time">2 days ago</span>
-                        </div>
-                    </li>
+                    
                 </ul>
 
                 <button class="btn-view-all">View All Notifications</button>
@@ -174,6 +141,7 @@
             
             <div class="quick-actions panel">
                 <h2>Quick Actions</h2>
+              
                 <div class="quick-action-card">
                     <div class="qa-icon qa-blue">
                         <span class="material-symbols-rounded">apartment</span>
@@ -261,6 +229,27 @@
 
         </section>
     </main>
+ <div class="modal hidden" id="modal">
+    <div class="modal-content">
+        <h3 id="modal-title"></h3>
+
+        <form id="modal-form">
+            <input
+                type="text"
+                id="modal-input"
+                placeholder=""
+                required
+            />
+            <div class="modal-actions">
+                <button type="submit">Confirm</button>
+                <button type="button" id="modal-cancel">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="js/main.js" type="module" defer></script>
 
 </body>
-</html>
+</html>< ! - -   P r o j e c t   s u b m i s s i o n   f o r   w e b   p r o g r a m m i n g   c o u r s e   - - >  
+ 
