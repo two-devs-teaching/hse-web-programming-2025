@@ -1,0 +1,50 @@
+{
+    "env": {
+        "node": true,
+        "es6": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings"
+    ],
+    "parser":  "@typescript-eslint/parser",
+    "plugins": ["import"],
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 2018
+    },
+    "rules": {
+        "no-console": "off",
+        "indent": ["error", 4],
+        "quotes": ["error", "single"],
+        "semi": ["error", "always"],
+        "object-curly-spacing": ["error", "always"],
+        "eol-last": ["error", "always"],
+        "@typescript-eslint/no-explicit-any": "off",
+        "import/no-unresolved": "off",
+        "import/named": "off",
+        "import/first": "error",
+        "import/dynamic-import-chunkname": "error",
+        "import/no-useless-path-segments": "error",
+        "import/no-duplicates": "error",
+        "import/newline-after-import": "error",
+        "import/order": [
+            "error",
+            {
+                "newlines-between": "always",
+                "alphabetize": { "order": "asc" },
+                "groups": [["builtin", "external"], "internal", "parent", ["sibling", "index"], "unknown"]
+            }
+        ]
+    },
+    "ignorePatterns": ["**/*.js"],
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": [".js", ".ts", ".d.ts"]
+            }
+        }
+    }
+}
