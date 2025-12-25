@@ -56,23 +56,81 @@
 /* Уведомление (колокольчик) */
 .notification {
     position: relative;
-    right: 0; 
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.notification:hover {
+    background: #f0fdfa;
+    transform: scale(1.05);
+}
+
+.notification:active {
+    transform: scale(0.95);
 }
 
 .notification .bell {
     font-size: 20px;
-    color: #6b7280; 
+    color: #6b7280;
+    transition: color 0.2s ease;
+}
+
+.notification:hover .bell {
+    color: #009688;
 }
 
 .notification .dot {
     position: absolute;
-    top: -2px; 
-    right: -2px;
-    width: 8px; 
-    height: 8px; 
-    background: #ff7b00; 
+    top: 8px;
+    right: 8px;
+    width: 8px;
+    height: 8px;
+    background: #ff7b00;
     border-radius: 50%;
-    border: 1px solid white; 
+    border: 1px solid white;
+    transition: all 0.2s ease;
+}
+
+/* Стили для разных статусов уведомлений */
+.notification.disabled .bell {
+    color: #9ca3af;
+    opacity: 0.5;
+}
+
+.notification.disabled .dot {
+    display: none;
+}
+
+.notification.granted .bell {
+    color: #10b981;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.notification.denied .bell {
+    color: #ef4444;
+}
+
+.notification.has-unread .dot {
+    background: #3b82f6;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
 }
 
 /* Аватар */

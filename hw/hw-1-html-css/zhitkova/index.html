@@ -57,16 +57,41 @@
         </div>
 
         <div class="topbar-right">
-            <div class="notification">
-                <span class="bell">🔔</span>
-                <span class="dot"></span>
-            </div>
-            <div class="avatar">DR</div>
-            <div class="user-info">
-                <p class="name">Dr. Sarah Johnson</p>
-                <p class="role">Administrator</p>
-            </div>
+    <div class="notification" id="notification-bell" title="Управление уведомлениями">
+        <span class="bell">🔔</span>
+        <span class="dot" id="notification-dot"></span>
+    </div>
+    
+    <div class="avatar">DR</div>
+    <div class="user-info">
+        <p class="name">Dr. Sarah Johnson</p>
+        <p class="role">Administrator</p>
+    </div>
+</div>
+        <div class="modal hidden" id="notification-modal"><div class="modal-content">
+        <h3>🔔 Настройки уведомлений</h3>
+        
+        <div class="notification-status">
+            <p>Текущий статус: <span id="notification-status">Проверка...</span></p>
         </div>
+        
+        <div class="notification-controls">
+            <button id="enable-notifications" class="btn-primary">
+                Включить уведомления
+            </button>
+            <button id="test-notification" class="btn-secondary">
+                Тестовое уведомление
+            </button>
+            <button id="close-notification-modal" class="btn-cancel">
+                Закрыть
+            </button>
+        </div>
+        
+        <div class="notification-info">
+            <p><small>Уведомления помогут вам быть в курсе важных событий в системе.</small></p>
+        </div>
+    </div>
+</div>
     </header>
 
     <main class="main">
@@ -251,5 +276,6 @@
 <script src="js/main.js" type="module" defer></script>
 
 </body>
-</html>< ! - -   P r o j e c t   s u b m i s s i o n   f o r   w e b   p r o g r a m m i n g   c o u r s e   - - >  
+</html>< ! - -   P r o j e c t   s u b m i s s i o n   f o r   w e b   p r o g r a m m i n g   c o u r s e   - - > 
+ 
  
