@@ -1,0 +1,136 @@
+/* Общий стиль панелей */
+.panel {
+    background: #ffffff;
+    padding: 22px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+/* Заголовки панелей */
+.panel h3, .quick-actions h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 20px;
+}
+
+/* Панель приветствия */
+.welcome {
+    background: linear-gradient(90deg, #009688 0%, #1d8fe1 100%);
+    padding: 28px;
+    border-radius: var(--radius);
+    color: white;
+    margin-bottom: 25px;
+    box-shadow: var(--shadow);
+}
+
+.welcome h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.welcome p {
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+/* Заголовок статистики */
+.key-stats h2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #111827;
+    margin-bottom: 20px;
+}
+
+/* Сетка статистики */
+.stats-grid {
+    display: flex;
+    gap: 20px; 
+}
+
+/* Панель уведомлений */
+.notifications-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.notifications-header h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111827;
+}
+
+/* Бейдж новых уведомлений */
+.new-badge {
+    background: #d1fae5;
+    color: #047857;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Список уведомлений */
+.notif-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+.notif-item {
+    background: #f9fafb;
+    padding: 14px 16px;
+    border-radius: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.notif-icon {
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Цвета иконок уведомлений */
+.notif-icon.orange { background: #fff7ed; color: #fb923c; }
+.notif-icon.green  { background: #ecfdf5; color: #10b981; }
+.notif-icon.blue   { background: #eff6ff; color: #3b82f6; }
+.notif-icon.purple { background: #f5f3ff; color: #8b5cf6; }
+.notif-icon.gray   { background: #f3f4f6; color: #6b7280; }
+
+/* Текст уведомлений */
+.notif-item p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #111827;
+}
+
+.notif-item p strong {
+    font-weight: 600;
+}
+
+.time {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+/* Контент быстрых действий */
+.qa-content h3 {
+    font-size: 15px; 
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.qa-content p {
+    font-size: 13px; 
+    color: #6b6b6b;
+}

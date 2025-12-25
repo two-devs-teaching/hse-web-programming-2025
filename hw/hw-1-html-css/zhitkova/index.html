@@ -1,0 +1,281 @@
+/* ссылка на макет https://cycle-crust-28901153.figma.site/ */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital Data Management Dashboard</title>
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+
+    <aside class="sidebar">
+        <nav class="sidebar-nav">
+            <a href="#" class="nav-item active">
+                <span class="nav-icon">🏠</span>
+                Dashboard
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">🏥</span>
+                Hospital Branches
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">🎓</span>
+                Trainees
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">📚</span>
+                Courses
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">👨‍⚕️</span>
+                Trainers
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">📅</span>
+                Schedule
+            </a>
+        </nav>
+
+        <div class="sidebar-card">
+            <h4>📊 Training Network</h4>
+            <p class="subtitle">15 active branches</p>
+            <div class="progress">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+    </aside>
+
+    <header class="topbar">
+        <div class="topbar-left">
+            <div class="logo-icon"></div>
+            <div class="topbar-title">
+                <h1>Hospital Data Management</h1>
+                <p>Healthcare Analytics Dashboard</p>
+            </div>
+        </div>
+
+        <div class="topbar-right">
+    <div class="notification" id="notification-bell" title="Управление уведомлениями">
+        <span class="bell">🔔</span>
+        <span class="dot" id="notification-dot"></span>
+    </div>
+    
+    <div class="avatar">DR</div>
+    <div class="user-info">
+        <p class="name">Dr. Sarah Johnson</p>
+        <p class="role">Administrator</p>
+    </div>
+</div>
+        <div class="modal hidden" id="notification-modal"><div class="modal-content">
+        <h3>🔔 Настройки уведомлений</h3>
+        
+        <div class="notification-status">
+            <p>Текущий статус: <span id="notification-status">Проверка...</span></p>
+        </div>
+        
+        <div class="notification-controls">
+            <button id="enable-notifications" class="btn-primary">
+                Включить уведомления
+            </button>
+            <button id="test-notification" class="btn-secondary">
+                Тестовое уведомление
+            </button>
+            <button id="close-notification-modal" class="btn-cancel">
+                Закрыть
+            </button>
+        </div>
+        
+        <div class="notification-info">
+            <p><small>Уведомления помогут вам быть в курсе важных событий в системе.</small></p>
+        </div>
+    </div>
+</div>
+    </header>
+
+    <main class="main">
+
+        <section class="welcome">
+            <h1>Welcome back, Dr. Sarah Johnson!</h1>
+            <p>Here's a snapshot of your hospital training network.</p>
+        </section>
+
+        <section class="key-stats">
+            <h2>Key Statistics</h2>
+
+            <div class="stats-grid">
+                
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <p class="stat-title">Total Hospital Branches</p>
+                        <p class="stat-value"></p>
+                    </div>
+                    <div class="stat-icon icon-blue">🏢</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <p class="stat-title">Active Courses</p>
+                        <p class="stat-value"></p>
+                    </div>
+                    <div class="stat-icon icon-green">📚</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <p class="stat-title">Enrolled Trainees</p>
+                        <p class="stat-value"></p>
+                    </div>
+                    <div class="stat-icon icon-purple">🎓</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <p class="stat-title">Active Trainers</p>
+                        <p class="stat-value"></p>
+                    </div>
+                    <div class="stat-icon icon-teal">👥</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <p class="stat-title">Upcoming Sessions</p>
+                        <p class="stat-value"></p>
+                    </div>
+                    <div class="stat-icon icon-orange">📅</div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="main-content-grid">
+            
+            <div class="notifications panel">
+                <div class="notifications-header">
+                    <h2>Recent Notifications</h2>
+                    <span class="new-badge"></span>
+                </div>
+
+                <ul class="notif-list">
+                    
+                </ul>
+
+                <button class="btn-view-all">View All Notifications</button>
+            </div>
+            
+            <div class="quick-actions panel">
+                <h2>Quick Actions</h2>
+              
+                <div class="quick-action-card">
+                    <div class="qa-icon qa-blue">
+                        <span class="material-symbols-rounded">apartment</span>
+                    </div>
+                    <div class="qa-content">
+                        <h3>Add New Branch</h3>
+                        <p>Register a new hospital branch</p>
+                    </div>
+                </div>
+
+                <div class="quick-action-card">
+                    <div class="qa-icon qa-green">
+                        <span class="material-symbols-rounded">menu_book</span>
+                    </div>
+                    <div class="qa-content">
+                        <h3>Add New Course</h3>
+                        <p>Create a training program</p>
+                    </div>
+                </div>
+
+                <div class="quick-action-card">
+                    <div class="qa-icon qa-orange">
+                        <span class="material-symbols-rounded">event</span>
+                    </div>
+                    <div class="qa-content">
+                        <h3>Schedule Training Session</h3>
+                        <p>Set up a new training session</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel enrollments-panel">
+                <h3>Recent Enrollments</h3>
+                <ul class="list-data">
+                    <li class="list-item">
+                        <span class="item-name">Advanced Cardiology</span>
+                        <span class="item-value green">+5</span>
+                    </li>
+                    <li class="list-item">
+                        <span class="item-name">Emergency Medicine</span>
+                        <span class="item-value green">+3</span>
+                    </li>
+                    <li class="list-item">
+                        <span class="item-name">Pediatric Care</span>
+                        <span class="item-value green">+7</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="panel completions-panel">
+                <h3>Course Completions</h3>
+                <ul class="list-data">
+                    <li class="list-item">
+                        <span class="item-name">Basic Surgery</span>
+                        <span class="item-value blue">12 completed</span>
+                    </li>
+                    <li class="list-item">
+                        <span class="item-name">Diagnostic Imaging</span>
+                        <span class="item-value blue">8 completed</span>
+                    </li>
+                    <li class="list-item">
+                        <span class="item-name">Patient Care</span>
+                        <span class="item-value blue">15 completed</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="panel performance-panel">
+                <h3>Branch Performance</h3>
+                <ul class="list-data">
+                    <li class="list-item">
+                        <span class="item-name">Lahore Branch</span>
+                        <span class="item-value teal">98% completion</span>
+                    </li>
+                    <li class="list-item">
+                        <span class="item-name">Karachi Branch</span>
+                        <span class="item-value teal">84% completion</span>
+                    </li>
+                    <li class="list-item">
+                        <span class="item-name">Islamabad Branch</span>
+                        <span class="item-value teal">96% completion</span>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+    </main>
+ <div class="modal hidden" id="modal">
+    <div class="modal-content">
+        <h3 id="modal-title"></h3>
+
+        <form id="modal-form">
+            <input
+                type="text"
+                id="modal-input"
+                placeholder=""
+                required
+            />
+            <div class="modal-actions">
+                <button type="submit">Confirm</button>
+                <button type="button" id="modal-cancel">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="js/main.js" type="module" defer></script>
+
+</body>
+</html>< ! - -   P r o j e c t   s u b m i s s i o n   f o r   w e b   p r o g r a m m i n g   c o u r s e   - - > 
+ 
+ 
